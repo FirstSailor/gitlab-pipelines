@@ -1,0 +1,23 @@
+@import '~bootstrap/scss/bootstrap';
+
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome';
+
+body {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.group-avatar {
+  max-height: 50px;
+  border-radius: 50%;
+}
+
+.group-title {
+  font-weight: 700;
+}
+
+.group-description {
+  font-size: 11px;
+  color: grey;
+}

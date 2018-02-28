@@ -1,0 +1,18 @@
+{# @var group \App\Model\Group #}
+
+<div class="row">
+    <div class="col-sm">
+        {% if group.avatarUrl is not empty %}
+            <img src="{{ group.avatarUrl }}" class="img-thumbnail group-avatar">
+        {% endif %}
+    </div>
+    <div class="col-sm">
+        <span class="group-title">{{ group.name }}</span>
+    </div>
+    <div class="col-sm">
+        <span class="group-description">{{ group.description }}</span>
+    </div>
+    <div class="col-sm">
+        <a href="{{ path('app.home.list_groups_pipelines', { 'groupId': group.id }) }}"><i class="fas fa-link"></i></a>
+    </div>
+</div>

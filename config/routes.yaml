@@ -1,0 +1,11 @@
+app.home.list_groups:
+    path: /groups
+    controller: App\Controller\HomeController::listGroupsAction
+    methods:  [GET]
+
+app.home.list_groups_pipelines:
+    path: /groups/{groupId}/pipelines
+    controller: App\Controller\HomeController::listGroupsPipelinesAction
+    requirements:
+        groupId: '\d+'
+    methods:  [GET]

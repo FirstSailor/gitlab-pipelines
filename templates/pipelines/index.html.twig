@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {# @var project \App\Model\Project #}
+    {% for project in projects %}
+
+        <table class="table table-hover table-sm">
+            <thead>
+                <th colspan="3">{{ project.name }}</th>
+            </thead>
+            <tbody>
+                {% include 'pipelines/project_pipeline.html.twig' with {'project': project} %}
+            </tbody>
+        </table>
+    {% endfor %}
+
+{% endblock %}

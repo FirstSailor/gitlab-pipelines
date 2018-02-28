@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <table class="table table-hover table-sm">
+        <tbody>
+        {% for group in groups %}
+            <tr>
+                <td>
+                    {% include 'groups/list_item.html.twig' with {'group': group} %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

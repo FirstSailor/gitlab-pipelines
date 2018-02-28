@@ -1,0 +1,6 @@
+zeichen32_git_lab_api:
+    clients:
+        nfq:
+            token: cPW4qcU-NjQoKnXbWpGz
+            url: http://gitlab.nfq.lt/api/v4/
+            auth_method: url_token

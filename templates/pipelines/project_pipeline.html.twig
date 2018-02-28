@@ -1,0 +1,20 @@
+{# @var project \App\Model\Project #}
+
+{% set activePipelines = project.pipelines.active %}
+
+{% if activePipelines is not empty %}
+    {% for pipeline in activePipelines %}
+        {# @var pipeline \App\Model\Pipeline #}
+        <tr>
+            <td>{{ pipeline.id }}</td>
+            <td>{{ pipeline.ref }}</td>
+            <td class="
+                {% if pipeline.running %}
+                bg-primary
+                {% else %}
+                bg-warning
+                {% endif %}
+            ">{{ pipeline.status }}</td>
+        </tr>
+    {% endfor %}
+{% endif %}
